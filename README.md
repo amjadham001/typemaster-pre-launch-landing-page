@@ -29,11 +29,11 @@ Users should be able to:
 
 ### Screenshot
 
--[Mobile screenshot](./screenshots/screenshot_mobile.png)
--[Tablet screenshot](./screenshots/screenshot_tablet.png)
--[Desktop screenshot](./screenshots/screenshot_desktop.png)
--[Primary button - hover & foucs screenshot](./screenshots/screenshot_primary_btn_hover_&_foucs_states.png)
--[Secondary button - hover & foucs screenshot](./screenshots/screenshot_secondary_btn_hover_&_foucs_states.png)
+- [Mobile screenshot](./screenshots/screenshot_mobile.png)
+- [Tablet screenshot](./screenshots/screenshot_tablet.png)
+- [Desktop screenshot](./screenshots/screenshot_desktop.png)
+- [Primary button - hover & foucs screenshot](./screenshots/screenshot_primary_btn_hover_&_foucs_states.png)
+- [Secondary button - hover & foucs screenshot](./screenshots/screenshot_secondary_btn_hover_&_foucs_states.png)
 
 ### Links
 
