@@ -1,1 +1,107 @@
+/* 
+  Always import custom fonts (like Google Fonts) BEFORE importing Tailwind CSS or any other CSS framework.
+  This ensures that the custom fonts are loaded and available when the framework's base styles and your own styles are applied.
+  If you import Tailwind first, its base styles may set font-family properties before your custom font is loaded,
+  causing the fallback font to be used instead of your intended custom font.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+	/* typemaster colors */
+	--color-tm-neutral-900: hsl(220, 50%, 17%);
+	--color-tm-neutral-400: hsl(221, 21%, 46%);
+	--color-tm-neutral-200: hsl(198, 28%, 93%);
+
+	--color-tm-orange-500: hsl(22, 89%, 52%);
+	--color-tm-orange-300: hsl(22, 100%, 69%);
+
+	/* typemaster typography */
+	--font-barlow: "Barlow", sans-serif;
+
+	--text-*: initial;
+	--text-base: 1rem;
+	--text-lg: 1.125rem;
+	--text-xl: 1.5rem;
+	--text-2xl: 2rem;
+	--text-3xl: 3rem;
+	--text-4xl: 3.5rem;
+
+	--leading-*: initial;
+	--text-base--line-height: 150%;
+	--text-lg--line-height: 150%;
+	--text-xl--line-height: 120%;
+	--text-2xl--line-height: 120%;
+	--text-3xl--line-height: 100%;
+	--text-4xl--line-height: 100%;
+
+	/* typemaster radius */
+	--radius-*: initial;
+	--radius-none: 0;
+	--radius-xs: 0.25rem;
+	--radius-sm: 0.375rem;
+	--radius-md: 0.5rem;
+	--radius-lg: 0.625rem;
+	--radius-xl: 0.75rem;
+	--radius-2xl: 1rem;
+	--radius-3xl: 1.25rem;
+	--radius-4xl: 1.5rem;
+	--radius-full: calc(infinity * 1px);
+}
+
+@layer components {
+	.tm-btn-primary {
+		font-weight: var(--font-weight-bold);
+		text-transform: uppercase;
+		color: var(--color-white);
+		background-color: var(--color-tm-orange-500);
+		border-radius: var(--radius-md);
+		padding-inline: --spacing(6);
+		padding-block: --spacing(4);
+
+		&:hover {
+			@media (hover: hover) {
+				background-color: var(--color-tm-orange-300);
+				cursor: pointer;
+			}
+		}
+
+		&:focus {
+			outline: --spacing(0.5) solid var(--color-tm-orange-500);
+			outline-offset: --spacing(0.75);
+		}
+	}
+	.tm-btn-secondary {
+		font-weight: var(--font-weight-bold);
+		text-transform: uppercase;
+		color: var(--color-tm-neutral-900);
+		background-color: var(--color-tm-neutral-200);
+		border-radius: var(--radius-md);
+		padding-inline: --spacing(6);
+		padding-block: --spacing(4);
+
+		&:hover {
+			@media (hover: hover) {
+				color: var(--color-white);
+				background-color: var(--color-tm-neutral-900);
+				cursor: pointer;
+			}
+		}
+
+		&:focus {
+			outline: --spacing(0.5) solid var(--color-tm-neutral-900);
+			outline-offset: --spacing(0.75);
+		}
+	}
+
+	.tm-icon {
+		background-color: var(--color-tm-orange-500);
+		border-radius: var(--radius-2xl);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: --spacing(16.25);
+		height: --spacing(16.25);
+	}
+}
