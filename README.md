@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Repository](https://github.com/amjadham001/typemaster-pre-launch-landing-page.git)
+- Live Site URL: [Live Demo](https://amjadham001.github.io/typemaster-pre-launch-landing-page/)
 
 ## My process
 
